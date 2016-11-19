@@ -79,7 +79,8 @@ public class MainActivity extends ActionBarActivity {
             // binden der Listview an den Adapter
             ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
             listView.setAdapter(adapter);
-            //ZZZZdgdgd
+            //ZZZZdgdgdhhhh
+
             return rootView;
         }
     }
