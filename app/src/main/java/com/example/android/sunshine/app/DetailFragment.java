@@ -92,6 +92,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         if (arguments != null) {
             mUri = arguments.getParcelable(DetailFragment.DETAIL_URI);
         }
+        //Image- und TextViews definieren
 
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
         mIconView = (ImageView) rootView.findViewById(R.id.detail_icon);
@@ -190,12 +191,12 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
             boolean isMetric = Utility.isMetric(getActivity());
 
             double high = data.getDouble(COL_WEATHER_MAX_TEMP);
-            String highString = Utility.formatTemperature(getActivity(), high, isMetric);
+            String highString = Utility.formatTemperature(getActivity(), high);
             mHighTempView.setText(highString);
 
             // Read low temperature from cursor and update view
             double low = data.getDouble(COL_WEATHER_MIN_TEMP);
-            String lowString = Utility.formatTemperature(getActivity(), low, isMetric);
+            String lowString = Utility.formatTemperature(getActivity(), low);
             mLowTempView.setText(lowString);
 
             // Read humidity from cursor and update view
